@@ -2,24 +2,25 @@
  * IMPORTS
  */
 import React from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
 // components
-import { CTA } from "./components/cta/cta";
-import { Hero } from "./components/hero/hero";
-import { HowItWorks } from "./components/howItworks/howItworks";
-import { Testimonials } from "./components/testimonials/testimonials";
-import { Features } from "./components/features/features";
-import { Footer } from "./components/footer/footer";
+import { PrivacyPolicy } from "./screens/privacy";
+import { TermsOfUse } from "./screens/terms";
+import { Home } from "./screens/home";
 
 function App() {
   return (
-    <div className="min-h-screen bg-black">
-      <Hero />
-      <Features />
-      <HowItWorks />
-      <Testimonials />
-      <CTA />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* HOME */}
+        <Route path="/" element={<Home />} />
+
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-use" element={<TermsOfUse />} />
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 

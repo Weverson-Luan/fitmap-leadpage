@@ -187,13 +187,13 @@ function Footer() {
           </p>
           <div className="flex gap-6">
             <a
-              href="#"
+              href="privacy-policy"
               className="text-white/40 hover:text-green-500 transition-colors"
             >
               Termos de Uso
             </a>
             <a
-              href="#"
+              href="terms-of-use"
               className="text-white/40 hover:text-green-500 transition-colors"
             >
               Privacidade
