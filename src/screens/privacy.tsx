@@ -188,6 +188,45 @@ function PrivacyPolicy() {
               <p className="text-gray-700 mt-4">
                 Para exercer seus direitos, entre em contato através do e-mail: <strong>privacidade@fitmap.com.br</strong>
               </p>
+
+
+            </div>
+
+            {/* Section 6.1 */}
+            <div className="mt-8 bg-gray-50 p-6 rounded-lg mb-2">
+              <h3 className="text-xl font-bold mb-3">
+                6.1 Exclusão de Conta
+              </h3>
+
+              <p className="text-gray-700 mb-4">
+                Os usuários do FitMap podem solicitar a exclusão de sua conta e de seus
+                dados pessoais a qualquer momento.
+              </p>
+
+              <p className="text-gray-700 mb-4">
+                Para solicitar a exclusão da conta, o usuário deve entrar em contato com
+                nossa equipe de suporte através dos e-mails:
+              </p>
+
+              <ul className="list-disc list-inside text-gray-700 mb-4">
+                <li>privacidade@fitmap.com.br</li>
+                <li>wltech2022@gmail.com</li>
+              </ul>
+
+              <p className="text-gray-700 mb-4">
+                No pedido, o usuário deve informar o e-mail utilizado no cadastro.
+              </p>
+
+              <p className="text-gray-700 mb-2">Após a solicitação:</p>
+
+              <ul className="list-disc list-inside text-gray-700">
+                <li>a conta será permanentemente excluída da plataforma</li>
+                <li>
+                  os dados pessoais serão removidos de nossos sistemas, exceto quando
+                  houver obrigação legal de retenção
+                </li>
+                <li>o processo de exclusão pode levar até 7 dias úteis</li>
+              </ul>
             </div>
 
             {/* Section 07 */}
