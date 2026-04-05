@@ -118,10 +118,15 @@ export function DownloadAppModal() {
             Cancelar
           </Button>
 
-          <a href="/downloads/app-expcargas-prd-v0.1.2.apk" download className="w-full">
+          <a
+            href="https://play.google.com/store/apps/details?id=br.com.fitsmap.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full"
+          >
             <Button className="w-full bg-green-500 hover:bg-green-600 text-black gap-2">
               <Smartphone className="w-4 h-4" />
-              Baixar APK
+              Play Store
             </Button>
           </a>
         </div>

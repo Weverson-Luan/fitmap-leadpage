@@ -1,6 +1,7 @@
 /**
  * IMPORTS
  */
+import React from "react"
 import { Hero } from "../components/hero/hero"
 import { Features } from "../components/features/features"
 import { HowItWorks } from "../components/howItworks/howItworks"
