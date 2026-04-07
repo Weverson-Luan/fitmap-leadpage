@@ -3,15 +3,21 @@
  */
 import React from "react";
 
-import { Search, Dumbbell } from "lucide-react";
+import { Dumbbell, Search } from "lucide-react";
 
 // components
 import { Button } from "../ui/button";
+import { Skeleton } from "../ui/skeleton";
 
 // commons
 import { ImageWithFallback } from "../../common/images/ImageWithFallback";
 
+// hooks
+import { useGetLeadStats } from "../../presentation/hooks/lead/use-get-lead-stats";
+import { formatNumber } from "../../utils/forma-number";
+
 function Hero() {
+  const { leadStats, isLoadingLeadStats } = useGetLeadStats();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -85,35 +91,54 @@ function Hero() {
 
 
           {/**VOLTAR QUANDO PUBLICAR APP NA LOJA */}
-          {/* <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              size="lg"
-              className="bg-green-500 hover:bg-green-600 text-black gap-2"
-            >
-              <Search className="w-5 h-5" />
-              Encontrar Personal
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
               variant="outline"
               className="border-white text-black hover:bg-white hover:text-black"
             >
-              Sou Personal Trainer
+              <a href="https://wa.me/5531982132421?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20FitMap.">
+                Sou Personal Trainer
+              </a>
             </Button>
-          </div> */}
+          </div>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-white/10">
             <div>
-              <div className="text-4xl text-green-500 mb-2">500+</div>
+              {isLoadingLeadStats ? (
+                <Skeleton className="h-10 w-24 mb-2 bg-white/10" />
+              ) : (
+                <div className="text-4xl text-green-500 mb-2 tabular-nums">
+                  {leadStats != null
+                    ? formatNumber(leadStats.totalTrainers) + "+"
+                    : "0"}
+                </div>
+              )}
               <div className="text-white/60">Personal Trainers</div>
             </div>
             <div>
-              <div className="text-4xl text-green-500 mb-2">2k+</div>
+              {isLoadingLeadStats ? (
+                <Skeleton className="h-10 w-24 mb-2 bg-white/10" />
+              ) : (
+                <div className="text-4xl text-green-500 mb-2 tabular-nums">
+                  {leadStats != null
+                    ? formatNumber(leadStats.totalStudents) + "+"
+                    : "0"}
+                </div>
+              )}
               <div className="text-white/60">Alunos Ativos</div>
             </div>
             <div>
-              <div className="text-4xl text-green-500 mb-2">50+</div>
+              {isLoadingLeadStats ? (
+                <Skeleton className="h-10 w-24 mb-2 bg-white/10" />
+              ) : (
+                <div className="text-4xl text-green-500 mb-2 tabular-nums">
+                  {leadStats != null
+                    ? formatNumber(leadStats.totalCities) + "+"
+                    : "0"}
+                </div>
+              )}
               <div className="text-white/60">Cidades</div>
             </div>
           </div>

@@ -21,7 +21,9 @@ function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/p/DWRksJ0joA9/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/5 hover:bg-green-500 rounded-full flex items-center justify-center transition-colors"
               >
                 <Instagram className="w-5 h-5 text-white" />
